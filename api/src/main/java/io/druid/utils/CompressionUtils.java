@@ -55,6 +55,18 @@ public class CompressionUtils
     io.druid.java.util.common.CompressionUtils.unzip(pulledFile, outDir);
   }
 
+  public List ObjectMapperNoncompliant(final File input) throws Exception {
+
+    final ObjectMapper mapper = new ObjectMapper();
+
+    // Noncompliant: enabling default typing can introduce a remote code execution vulnerability.
+
+    mapper.enableDefaultTyping();
+
+    return mapper.readValue(input, List.class);
+
+}
+
   @Deprecated // Use com.metamx.common.CompressionUtils.unzip
   public static void unzip(InputStream in, File outDir) throws IOException
   {
