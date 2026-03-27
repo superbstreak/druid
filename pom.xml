@@ -68,7 +68,7 @@
         <jetty.version>9.3.19.v20170502</jetty.version>
         <jersey.version>1.19.3</jersey.version>
         <!-- Watch out for Hadoop compatibility when updating to >= 2.5; see https://github.com/druid-io/druid/pull/1669 -->
-        <jackson.version>2.4.6</jackson.version>
+        <jackson.version>2.18.6</jackson.version>
         <log4j.version>2.5</log4j.version>
         <!-- Update to Netty 4.1 is not possible yet, see https://github.com/druid-io/druid/issues/4390 and comments
              in https://github.com/druid-io/druid/pull/4973 -->
@@ -737,7 +737,7 @@
             <dependency>
                 <groupId>org.codehaus.plexus</groupId>
                 <artifactId>plexus-utils</artifactId>
-                <version>3.0.15</version>
+                <version>4.0.3</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.calcite</groupId>
